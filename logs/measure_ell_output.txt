@@ -1,0 +1,9 @@
+sanity: min pressure at cell (i=19, j=19) = (4875 m, 4875 m); well centre in meta = (5000 m, 5000 m)
+        if these disagree, the reshape order assumption is wrong -- stop here.
+
+averaged over 200 samples
+  day   ell (m)  ell (cells)
+    5       616          2.5
+   50       923          3.7
+  250      1234          4.9
+  500      1297          5.2
