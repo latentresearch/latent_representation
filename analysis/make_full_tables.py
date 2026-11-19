@@ -10,7 +10,7 @@ against the published means before anything is written.
 import copy, glob, json, os, re, sys
 import numpy as np
 
-W = "/work/jing"
+W = "<DATA_ROOT>"
 NS = (8, 16, 32, 64)
 LEVELS = (250, 500, 1000, 1500, 3000)
 ELL = 1200.0

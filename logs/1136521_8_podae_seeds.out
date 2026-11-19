@@ -1,4 +1,4 @@
-task=8 exp=B seed=3 data=/work/jing/ldo_data_v3_reconfirm start=Tue Oct 27 13:16:58 CDT 2026
+task=8 exp=B seed=3 data=<DATA_ROOT>/ldo_data_v3_reconfirm start=Tue Oct 27 13:16:58 CDT 2026
 torch using 64 CPU threads
 Loading 1000 samples ...
   ... 500/1000 loaded, 25s
@@ -75,4 +75,4 @@ Training AE on device=cpu
   16     0.03831     0.00651     83.0%
   32     0.02228     0.00563     74.7%
   64     0.01168     0.00488     58.2%
-finished exp=B seed=3: Tue Oct 27 17:11:27 CDT 2026 -> /ddnB/work/jing/logs/seeds/results_B_seed3.json
+finished exp=B seed=3: Tue Oct 27 17:11:27 CDT 2026 -> <DATA_ROOT>/logs/seeds/results_B_seed3.json

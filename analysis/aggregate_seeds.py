@@ -5,7 +5,7 @@ results_{A|B}_seed{s}.json, each containing
   {"results": [{"n":..., "eta_pod":..., "eta_ae":...}, ...],
    "ae_diagnostics": {"8": {"best_epoch":..., "n_epochs_run":...}, ...}}
 
-Usage:  python3 aggregate_seeds.py --dir /ddnB/work/jing/logs/seeds --out table_seeds.tex
+Usage:  python3 aggregate_seeds.py --dir <DATA_ROOT>/logs/seeds --out table_seeds.tex
 """
 import json
 import argparse, glob, os, re

@@ -35,7 +35,7 @@ The 500-epoch JSON files in `logs/seeds/` were rebuilt from the job logs by `mak
 
 ## Reproducing the tables
 
-The scripts currently contain cluster paths (`/work/jing`, `/ddnB/work/jing`). Set them before running.
+The scripts currently contain cluster paths (`<DATA_ROOT>`, `<DATA_ROOT>`). Set them before running.
 
 ```bash
 # Experiments A and B (500 epochs) and Experiment C from the logs

@@ -10,7 +10,7 @@ Outputs (in --out):
 and prints the crossover R/ell for each n (linear interpolation of the mean gap).
 
 Usage:
-  python3 plot_dose.py --seeds ~/seeds_500ep --dose /ddnB/work/jing/logs/dose \
+  python3 plot_dose.py --seeds ~/seeds_500ep --dose <DATA_ROOT>/logs/dose \
                        --ell 1200 --out ~/figs_dose
 """
 import argparse, glob, json, os, re
