@@ -1,0 +1,10 @@
+Exp A: n= 8  eps_n=0.0237  sigma_n/sigma_1=7.1156e-03
+Exp A: n=16  eps_n=0.0186  sigma_n/sigma_1=3.7900e-03
+Exp A: n=32  eps_n=0.0145  sigma_n/sigma_1=2.3432e-03
+Exp A: n=64  eps_n=0.0107  sigma_n/sigma_1=1.3696e-03
+Exp A: total_sq=2.122065e+16
+Exp B: n= 8  eps_n=0.3152  sigma_n/sigma_1=2.8218e-01
+Exp B: n=16  eps_n=0.1971  sigma_n/sigma_1=1.2280e-01
+Exp B: n=32  eps_n=0.1114  sigma_n/sigma_1=5.1855e-02
+Exp B: n=64  eps_n=0.0553  sigma_n/sigma_1=2.0553e-02
+Exp B: total_sq=9.081602e+16

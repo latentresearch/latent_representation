@@ -1,0 +1,25 @@
+Exp A: n= 8  eps_n=0.0719  sigma_n/sigma_1=5.4185e-02
+Exp A: n=16  eps_n=0.0253  sigma_n/sigma_1=1.5073e-02
+Exp A: n=32  eps_n=0.0154  sigma_n/sigma_1=3.0114e-03
+Exp A: n=64  eps_n=0.0111  sigma_n/sigma_1=1.5472e-03
+Exp A: total_sq=2.441414e+16
+Exp A: n= 8  eps_n=0.1121  sigma_n/sigma_1=1.0441e-01
+Exp A: n=16  eps_n=0.0518  sigma_n/sigma_1=2.0038e-02
+Exp A: n=32  eps_n=0.0230  sigma_n/sigma_1=9.8631e-03
+Exp A: n=64  eps_n=0.0113  sigma_n/sigma_1=1.9543e-03
+Exp A: total_sq=2.999199e+16
+Exp A: n= 8  eps_n=0.1858  sigma_n/sigma_1=1.7420e-01
+Exp A: n=16  eps_n=0.0770  sigma_n/sigma_1=4.1228e-02
+Exp A: n=32  eps_n=0.0413  sigma_n/sigma_1=1.2264e-02
+Exp A: n=64  eps_n=0.0215  sigma_n/sigma_1=7.1700e-03
+Exp A: total_sq=4.499357e+16
+Exp A: n= 8  eps_n=0.2254  sigma_n/sigma_1=2.2478e-01
+Exp A: n=16  eps_n=0.1097  sigma_n/sigma_1=8.2529e-02
+Exp A: n=32  eps_n=0.0488  sigma_n/sigma_1=2.2446e-02
+Exp A: n=64  eps_n=0.0297  sigma_n/sigma_1=7.8594e-03
+Exp A: total_sq=6.233603e+16
+Exp A: n= 8  eps_n=0.3097  sigma_n/sigma_1=2.8751e-01
+Exp A: n=16  eps_n=0.1872  sigma_n/sigma_1=1.2357e-01
+Exp A: n=32  eps_n=0.0994  sigma_n/sigma_1=4.9993e-02
+Exp A: n=64  eps_n=0.0437  sigma_n/sigma_1=1.7308e-02
+Exp A: total_sq=1.116172e+17

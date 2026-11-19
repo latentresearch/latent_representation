@@ -1,8 +1,11 @@
 """Measure the characteristic drawdown radius ell of the fixed-well ensemble.
 
-ell = radius at which the depth-averaged drawdown falls to half its value at
-the well, measured relative to the outermost ring of the domain. Because the
-cone grows by diffusion, ell is reported at several snapshot times.
+ell = radius at which the depth-averaged drawdown falls to half its value in
+the innermost occupied radial bin (the four cells nearest the well, about
+177 m from it). The far-field reference is the maximum of the radial mean
+profile (draw = prof.max() - prof), and ell is linearly interpolated between
+125 m bins. Because the cone grows by diffusion, ell is reported at several
+snapshot times.
 
 Assumptions (checked by the sanity test printed first):
   * 40 x 40 x 20 cells, 250 m x 250 m in plane, OpenFOAM blockMesh ordering
