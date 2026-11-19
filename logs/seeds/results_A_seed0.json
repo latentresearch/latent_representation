@@ -1,0 +1,58 @@
+{
+ "n_train_snapshots": 85000,
+ "n_test_snapshots": 15000,
+ "held_out_frac": 0.15,
+ "results": [
+  {
+   "n": 8,
+   "eta_pod": 0.0022,
+   "eta_ae": 0.00228,
+   "gap_pct": -3.636363636363626
+  },
+  {
+   "n": 16,
+   "eta_pod": 0.00173,
+   "eta_ae": 0.00208,
+   "gap_pct": -20.23121387283236
+  },
+  {
+   "n": 32,
+   "eta_pod": 0.00139,
+   "eta_ae": 0.00167,
+   "gap_pct": -20.143884892086337
+  },
+  {
+   "n": 64,
+   "eta_pod": 0.00107,
+   "eta_ae": 0.00158,
+   "gap_pct": -47.663551401869164
+  }
+ ],
+ "ae_diagnostics": {
+  "8": {
+   "best_epoch": 218,
+   "best_val_mse": 0.0002650935493875295,
+   "n_epochs_run": 238,
+   "flag": "OK"
+  },
+  "16": {
+   "best_epoch": 260,
+   "best_val_mse": 0.00019646128930617124,
+   "n_epochs_run": 280,
+   "flag": "OK"
+  },
+  "32": {
+   "best_epoch": 304,
+   "best_val_mse": 0.00014374335296452045,
+   "n_epochs_run": 324,
+   "flag": "OK"
+  },
+  "64": {
+   "best_epoch": 264,
+   "best_val_mse": 0.0001021812204271555,
+   "n_epochs_run": 284,
+   "flag": "OK"
+  }
+ },
+ "rebuilt_from_log": "logs/1136521_0_podae_seeds.out"
+}

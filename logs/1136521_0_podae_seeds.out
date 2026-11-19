@@ -1,0 +1,78 @@
+task=0 exp=A seed=0 data=/work/jing/ldo_data_v3_fixedwell start=Tue Oct 27 13:16:58 CDT 2026
+torch using 64 CPU threads
+Loading 1000 samples ...
+  ... 500/1000 loaded, 26s
+  ... 1000/1000 loaded, 51s
+Snapshot matrix: (100000, 32000), 54s
+Train snapshots: 85000  Test snapshots: 15000
+
+=== POD ===
+Running randomized SVD (n_components=64) on (85000, 32000) ...
+  SVD done in 9s
+  n=  8  eta_POD=0.00220
+  n= 16  eta_POD=0.00173
+  n= 32  eta_POD=0.00139
+  n= 64  eta_POD=0.00107
+
+=== Autoencoder ===
+Training AE on device=cpu
+  n=  8  epoch 50/500  train_mse=0.00107  val_mse=0.00108  lr=1.00e-03  best@49
+  n=  8  epoch 100/500  train_mse=0.00093  val_mse=0.00093  lr=5.00e-04  best@99
+  n=  8  epoch 150/500  train_mse=0.00090  val_mse=0.00103  lr=5.00e-04  best@146
+  n=  8  epoch 200/500  train_mse=0.00091  val_mse=0.00089  lr=5.00e-04  best@198
+  n=  8  epoch 250/500  train_mse=0.00088  val_mse=0.00085  lr=5.00e-04  best@250
+  n=  8  epoch 300/500  train_mse=0.00084  val_mse=0.00089  lr=5.00e-04  best@298
+  n=  8  epoch 350/500  train_mse=0.00080  val_mse=0.00081  lr=2.50e-04  best@344
+  n=  8  epoch 400/500  train_mse=0.00078  val_mse=0.00079  lr=6.25e-05  best@400
+  n=  8  epoch 450/500  train_mse=0.00078  val_mse=0.00079  lr=6.25e-05  best@442
+  n=  8  early stop at epoch 472 (no val improvement in 20 epochs)
+  n=  8  OK
+  n= 16  epoch 50/500  train_mse=0.00113  val_mse=0.00093  lr=1.00e-03  best@50
+  n= 16  epoch 100/500  train_mse=0.00071  val_mse=0.00070  lr=5.00e-04  best@99
+  n= 16  epoch 150/500  train_mse=0.00061  val_mse=0.00060  lr=5.00e-04  best@147
+  n= 16  epoch 200/500  train_mse=0.00058  val_mse=0.00058  lr=2.50e-04  best@194
+  n= 16  epoch 250/500  train_mse=0.00056  val_mse=0.00056  lr=2.50e-04  best@245
+  n= 16  epoch 300/500  train_mse=0.00055  val_mse=0.00055  lr=2.50e-04  best@298
+  n= 16  epoch 350/500  train_mse=0.00054  val_mse=0.00054  lr=2.50e-04  best@350
+  n= 16  epoch 400/500  train_mse=0.00052  val_mse=0.00053  lr=2.50e-04  best@398
+  n= 16  epoch 450/500  train_mse=0.00051  val_mse=0.00052  lr=1.25e-04  best@449
+  n= 16  epoch 500/500  train_mse=0.00050  val_mse=0.00051  lr=1.25e-04  best@494
+  n= 16  OK
+  n= 32  epoch 50/500  train_mse=0.00092  val_mse=0.00086  lr=1.00e-03  best@50
+  n= 32  epoch 100/500  train_mse=0.00054  val_mse=0.00049  lr=1.00e-03  best@96
+  n= 32  epoch 150/500  train_mse=0.00040  val_mse=0.00041  lr=2.50e-04  best@149
+  n= 32  epoch 200/500  train_mse=0.00035  val_mse=0.00035  lr=2.50e-04  best@199
+  n= 32  epoch 250/500  train_mse=0.00034  val_mse=0.00034  lr=2.50e-04  best@249
+  n= 32  epoch 300/500  train_mse=0.00032  val_mse=0.00033  lr=2.50e-04  best@297
+  n= 32  epoch 350/500  train_mse=0.00032  val_mse=0.00032  lr=2.50e-04  best@342
+  n= 32  epoch 400/500  train_mse=0.00032  val_mse=0.00031  lr=2.50e-04  best@394
+  n= 32  epoch 450/500  train_mse=0.00031  val_mse=0.00031  lr=2.50e-04  best@449
+  n= 32  early stop at epoch 491 (no val improvement in 20 epochs)
+  n= 32  OK
+  n= 64  epoch 50/500  train_mse=0.00098  val_mse=0.00080  lr=1.00e-03  best@50
+  n= 64  epoch 100/500  train_mse=0.00046  val_mse=0.00043  lr=1.00e-03  best@97
+  n= 64  early stop at epoch 134 (no val improvement in 20 epochs)
+  n= 64  WARNING: best val_mse was at epoch 114, 20 epochs before stopping (final val_mse=0.00036 vs best=0.00034) -- using best checkpoint, not final weights
+  n=  8  eta_AE=0.00228
+  n= 16  eta_AE=0.00208
+  n= 32  eta_AE=0.00167
+  n= 64  eta_AE=0.00158
+
+=== Training diagnostics ===
+  n=  8  best_epoch=452/472  best_val_mse=0.00079  OK
+  n= 16  best_epoch=494/500  best_val_mse=0.00051  OK
+  n= 32  best_epoch=471/491  best_val_mse=0.00030  OK
+  n= 64  best_epoch=114/134  best_val_mse=0.00034  WARNING: best val_mse was at epoch 114, 20 epochs before stopping (final val_mse=0.00036 vs best=0.00034) -- using best checkpoint, not final weights
+
+  NOTE: one or more n used a checkpoint well before the final epoch.
+  This is handled automatically (best-val weights are what's evaluated),
+  but if best_epoch is very early relative to n_epochs_run, consider
+  more epochs, a lower --lr, or more training data for that n.
+
+=== Summary (Table 3.1 candidate) ===
+   n     eta_POD      eta_AE     gap_%
+   8     0.00220     0.00228     -3.5%
+  16     0.00173     0.00208    -20.1%
+  32     0.00139     0.00167    -19.9%
+  64     0.00107     0.00158    -48.2%
+finished exp=A seed=0: Tue Oct 27 16:50:39 CDT 2026 -> /ddnB/work/jing/logs/seeds/results_A_seed0.json

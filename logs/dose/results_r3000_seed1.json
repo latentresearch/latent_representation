@@ -1,0 +1,57 @@
+{
+  "n_train_snapshots": 85000,
+  "n_test_snapshots": 15000,
+  "held_out_frac": 0.15,
+  "results": [
+    {
+      "n": 8,
+      "eta_pod": 0.06651904433965683,
+      "eta_ae": 0.0048227026127278805,
+      "gap_pct": 92.74989191350616
+    },
+    {
+      "n": 16,
+      "eta_pod": 0.04073777422308922,
+      "eta_ae": 0.003929645288735628,
+      "gap_pct": 90.35380463543244
+    },
+    {
+      "n": 32,
+      "eta_pod": 0.021977130323648453,
+      "eta_ae": 0.0035217981785535812,
+      "gap_pct": 83.97516815576256
+    },
+    {
+      "n": 64,
+      "eta_pod": 0.009976263158023357,
+      "eta_ae": 0.0028200524393469095,
+      "gap_pct": 71.73237719697784
+    }
+  ],
+  "ae_diagnostics": {
+    "8": {
+      "best_epoch": 442,
+      "best_val_mse": 0.00023552961647510529,
+      "n_epochs_run": 462,
+      "flag": "OK"
+    },
+    "16": {
+      "best_epoch": 413,
+      "best_val_mse": 0.00014103051216807216,
+      "n_epochs_run": 433,
+      "flag": "OK"
+    },
+    "32": {
+      "best_epoch": 298,
+      "best_val_mse": 0.00011310788977425545,
+      "n_epochs_run": 318,
+      "flag": "OK"
+    },
+    "64": {
+      "best_epoch": 292,
+      "best_val_mse": 7.786836795276031e-05,
+      "n_epochs_run": 312,
+      "flag": "WARNING: best val_mse was at epoch 292, 20 epochs before stopping (final val_mse=0.00008 vs best=0.00008) -- using best checkpoint, not final weights"
+    }
+  }
+}

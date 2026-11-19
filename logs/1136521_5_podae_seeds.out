@@ -1,0 +1,77 @@
+task=5 exp=B seed=0 data=/work/jing/ldo_data_v3_reconfirm start=Tue Oct 27 13:16:58 CDT 2026
+torch using 64 CPU threads
+Loading 1000 samples ...
+  ... 500/1000 loaded, 25s
+  ... 1000/1000 loaded, 51s
+Snapshot matrix: (100000, 32000), 54s
+Train snapshots: 85000  Test snapshots: 15000
+
+=== POD ===
+Running randomized SVD (n_components=64) on (85000, 32000) ...
+  SVD done in 11s
+  n=  8  eta_POD=0.06062
+  n= 16  eta_POD=0.03877
+  n= 32  eta_POD=0.02205
+  n= 64  eta_POD=0.01131
+
+=== Autoencoder ===
+Training AE on device=cpu
+  n=  8  epoch 50/500  train_mse=0.00105  val_mse=0.00099  lr=1.00e-03  best@47
+  n=  8  epoch 100/500  train_mse=0.00068  val_mse=0.00068  lr=5.00e-04  best@98
+  n=  8  epoch 150/500  train_mse=0.00056  val_mse=0.00058  lr=1.25e-04  best@146
+  n=  8  epoch 200/500  train_mse=0.00053  val_mse=0.00055  lr=1.25e-04  best@200
+  n=  8  epoch 250/500  train_mse=0.00051  val_mse=0.00053  lr=1.25e-04  best@250
+  n=  8  epoch 300/500  train_mse=0.00049  val_mse=0.00051  lr=1.25e-04  best@298
+  n=  8  epoch 350/500  train_mse=0.00048  val_mse=0.00050  lr=1.25e-04  best@344
+  n=  8  epoch 400/500  train_mse=0.00046  val_mse=0.00048  lr=1.25e-04  best@397
+  n=  8  epoch 450/500  train_mse=0.00045  val_mse=0.00047  lr=1.25e-04  best@450
+  n=  8  epoch 500/500  train_mse=0.00043  val_mse=0.00046  lr=6.25e-05  best@491
+  n=  8  OK
+  n= 16  epoch 50/500  train_mse=0.00081  val_mse=0.00071  lr=1.00e-03  best@48
+  n= 16  epoch 100/500  train_mse=0.00047  val_mse=0.00048  lr=2.50e-04  best@100
+  n= 16  epoch 150/500  train_mse=0.00041  val_mse=0.00042  lr=2.50e-04  best@149
+  n= 16  epoch 200/500  train_mse=0.00036  val_mse=0.00042  lr=2.50e-04  best@198
+  n= 16  epoch 250/500  train_mse=0.00033  val_mse=0.00034  lr=2.50e-04  best@249
+  n= 16  epoch 300/500  train_mse=0.00029  val_mse=0.00031  lr=1.25e-04  best@299
+  n= 16  epoch 350/500  train_mse=0.00028  val_mse=0.00029  lr=1.25e-04  best@345
+  n= 16  epoch 400/500  train_mse=0.00026  val_mse=0.00028  lr=6.25e-05  best@395
+  n= 16  epoch 450/500  train_mse=0.00025  val_mse=0.00027  lr=6.25e-05  best@446
+  n= 16  epoch 500/500  train_mse=0.00024  val_mse=0.00026  lr=6.25e-05  best@496
+  n= 16  OK
+  n= 32  epoch 50/500  train_mse=0.00053  val_mse=0.00065  lr=1.00e-03  best@45
+  n= 32  epoch 100/500  train_mse=0.00030  val_mse=0.00040  lr=5.00e-04  best@96
+  n= 32  epoch 150/500  train_mse=0.00021  val_mse=0.00020  lr=5.00e-04  best@148
+  n= 32  epoch 200/500  train_mse=0.00015  val_mse=0.00016  lr=2.50e-04  best@195
+  n= 32  epoch 250/500  train_mse=0.00013  val_mse=0.00014  lr=1.25e-04  best@248
+  n= 32  epoch 300/500  train_mse=0.00012  val_mse=0.00013  lr=1.25e-04  best@300
+  n= 32  epoch 350/500  train_mse=0.00011  val_mse=0.00012  lr=1.25e-04  best@347
+  n= 32  early stop at epoch 388 (no val improvement in 20 epochs)
+  n= 32  OK
+  n= 64  epoch 50/500  train_mse=0.00057  val_mse=0.00043  lr=1.00e-03  best@49
+  n= 64  epoch 100/500  train_mse=0.00021  val_mse=0.00018  lr=5.00e-04  best@99
+  n= 64  epoch 150/500  train_mse=0.00015  val_mse=0.00020  lr=5.00e-04  best@149
+  n= 64  epoch 200/500  train_mse=0.00009  val_mse=0.00010  lr=1.25e-04  best@196
+  n= 64  epoch 250/500  train_mse=0.00009  val_mse=0.00009  lr=1.25e-04  best@245
+  n= 64  epoch 300/500  train_mse=0.00008  val_mse=0.00009  lr=1.25e-04  best@298
+  n= 64  epoch 350/500  train_mse=0.00008  val_mse=0.00009  lr=1.25e-04  best@333
+  n= 64  epoch 400/500  train_mse=0.00007  val_mse=0.00008  lr=3.13e-05  best@388
+  n= 64  early stop at epoch 408 (no val improvement in 20 epochs)
+  n= 64  OK
+  n=  8  eta_AE=0.00649
+  n= 16  eta_AE=0.00592
+  n= 32  eta_AE=0.00504
+  n= 64  eta_AE=0.00469
+
+=== Training diagnostics ===
+  n=  8  best_epoch=491/500  best_val_mse=0.00046  OK
+  n= 16  best_epoch=496/500  best_val_mse=0.00026  OK
+  n= 32  best_epoch=368/388  best_val_mse=0.00011  OK
+  n= 64  best_epoch=388/408  best_val_mse=0.00008  OK
+
+=== Summary (Table 3.1 candidate) ===
+   n     eta_POD      eta_AE     gap_%
+   8     0.06062     0.00649     89.3%
+  16     0.03877     0.00592     84.7%
+  32     0.02205     0.00504     77.1%
+  64     0.01131     0.00469     58.5%
+finished exp=B seed=0: Tue Oct 27 17:04:41 CDT 2026 -> /ddnB/work/jing/logs/seeds/results_B_seed0.json
