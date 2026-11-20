@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reservoirProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+mu          5.000000e-03;
+
+// EVENT (Ch.4 Sec.4.6): well-rate step, randomized per
+// sample -- see generate_samples_v3.py EVENT_TIME_*/RATE_MULT_*.
+// Sink coefficient only (still linear in p): the point is a
+// genuine change in the effective discrete-time operator A(t)
+// mid-trajectory, not an attempt to make the physics itself
+// nonlinear.
+// event_time = 334.60 days, rate 2.0000e-06 -> 2.0000e-06 [1/s]
+wellRate
+{
+    type    table;
+    values
+    (
+        (0             2.000000e-06)
+        (28900800.0  2.000000e-06)
+        (28909440.0  2.000000e-06)
+        (43200000.0  2.000000e-06)
+    );
+    outOfBounds clamp;
+}
+
+// K, phi, ct are all read as spatially-resolved fields
+// (constant/K, constant/phi, constant/ct). ct is physically
+// coupled to phi at generation time (ct_from_phi), not an
+// independent random field. Zone entries below are for
+// reference only and are not read by the solver.
+zones
+{
+    bottomLayer { K  2.961e-13;  phi  0.20; }
+    topLayer    { K  1.974e-14;  phi  0.10; }
+    wellCells   { K  9.869e-12;  phi  1.0; }
+}

@@ -1,0 +1,61 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2212                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+application     darcyFoam;
+
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         43200000.0;       // 500 days
+
+deltaT          8640.00;          // 0.1 day timestep
+
+writeControl    timeStep;
+writeInterval   50;             // -> 100 snapshots
+purgeWrite      0;
+
+writeFormat     binary;
+writePrecision  8;
+writeCompression off;
+
+runTimeModifiable true;
+
+functions
+{
+    wellPressure
+    {
+        type            volFieldValue;
+        libs            ("libfieldFunctionObjects.so");
+        fields          (p);
+        operation       volAverage;
+        regionType      cellZone;
+        name            wellCells;
+        writeFields     false;
+        writeControl    timeStep;
+        writeInterval   50;
+    }
+    reservoirPressure
+    {
+        type            volFieldValue;
+        libs            ("libfieldFunctionObjects.so");
+        fields          (p);
+        operation       volAverage;
+        regionType      all;
+        writeFields     false;
+        writeControl    timeStep;
+        writeInterval   50;
+    }
+}
