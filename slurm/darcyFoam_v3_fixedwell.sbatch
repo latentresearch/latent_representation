@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=ldo_v3_fixedwell
 #SBATCH --partition=workq
-#SBATCH --account=loni_latent_pde
+#SBATCH --account=<ACCOUNT>
 #SBATCH --nodes=1
 #SBATCH --ntasks=64
 #SBATCH --cpus-per-task=1

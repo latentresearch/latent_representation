@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=ch3_fixedwell_sweep
 #SBATCH --partition=workq
-#SBATCH --account=loni_latent_pde
+#SBATCH --account=<ACCOUNT>
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64

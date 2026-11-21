@@ -6,7 +6,7 @@
 #   sbatch --export=ALL,R=500  darcyFoam_v3_radius.sbatch   ... (R = 1000, 1500, 3000)
 #SBATCH --job-name=ldo_v3_radius
 #SBATCH --partition=workq
-#SBATCH --account=loni_latent_pde
+#SBATCH --account=<ACCOUNT>
 #SBATCH --nodes=1
 #SBATCH --ntasks=64
 #SBATCH --cpus-per-task=1
