@@ -16,7 +16,7 @@ tests generalization to unseen well locations, not just unseen timesteps
 of an already-seen well.
 
 Usage:
-    python3 pod_vs_ae_eta.py /work/jing/LDO_project/ldo_data_v2 \
+    python3 pod_vs_ae_eta.py <DATA_ROOT>/ldo_data_v3_fixedwell \
         --n-dims 8 16 32 64 \
         --held-out-frac 0.15 \
         --max-samples 5001 \

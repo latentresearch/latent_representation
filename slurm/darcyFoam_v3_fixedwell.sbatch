@@ -11,7 +11,7 @@
 
 module purge
 module load openfoam
-export PATH=$PATH:<HOME>/.local/bin:<HOME>/OpenFOAM/jing-v2212/platforms/linux64GccDPInt32Opt/bin
+export PATH=$PATH:<HOME>/.local/bin:<OPENFOAM_BIN>
 
 WORK_DIR=<DATA_ROOT>
 BASE_CASE=<DATA_ROOT>/base_case
