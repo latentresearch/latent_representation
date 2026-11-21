@@ -1,0 +1,21 @@
+{
+  "n_train_snapshots": 85000,
+  "n_test_snapshots": 15000,
+  "held_out_frac": 0.15,
+  "results": [
+    {
+      "n": 16,
+      "eta_pod": 0.0017360717756673694,
+      "eta_ae": 0.0022150296717882156,
+      "gap_pct": -27.588599897416593
+    }
+  ],
+  "ae_diagnostics": {
+    "16": {
+      "best_epoch": 723,
+      "best_val_mse": 0.00045996365952305496,
+      "n_epochs_run": 743,
+      "flag": "OK"
+    }
+  }
+}
