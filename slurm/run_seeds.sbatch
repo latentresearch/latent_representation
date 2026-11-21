@@ -5,7 +5,7 @@
 # Settings copied from ch3_full_sweep.sbatch.
 #SBATCH --job-name=podae_seeds
 #SBATCH --partition=workq
-#SBATCH --account=loni_latent_pde
+#SBATCH --account=<ACCOUNT>
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64

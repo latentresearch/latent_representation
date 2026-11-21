@@ -5,7 +5,7 @@
 # comparable with Experiment A (R = 0) and B.
 #SBATCH --job-name=podae_dose
 #SBATCH --partition=workq
-#SBATCH --account=loni_latent_pde
+#SBATCH --account=<ACCOUNT>
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64
