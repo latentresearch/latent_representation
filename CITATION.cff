@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "How to Choose a Latent Representation for PDE Surrogates? A Falsifiable Test of Representation Faithfulness"
+authors:
+  - name: "[Authors withheld for double-blind review]"
+version: 1.0
+license: MIT
+repository-code: "https://github.com/latentresearch/latent_representation"

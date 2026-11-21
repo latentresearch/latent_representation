@@ -204,8 +204,8 @@ See `CITATION.cff` and `LICENSE`.
 
 ## TODO
 
-- [ ] Commit and push the new analysis and slurm files, then add the commit hash to
-      the manuscript's data-availability statement.
+- [x] Commit and push the new analysis and slurm files, then add the commit hash to
+      the manuscript's data-availability statement (commit b0f0612).
 - [ ] Report the drawdown-relative error once the full run is complete.
 - [ ] State the raw-data archive location.
 - [ ] Confirm `showquota` output format before relying on the file-count guards in
