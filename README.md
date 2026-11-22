@@ -100,11 +100,13 @@ the rock fields are identical to the fixed-well run for the same `--seed`.
 
 ### Epoch cap
 
-Under the 500-epoch cap, 18 of the 40 AE fits (A: 8/20, B: 10/20) reached the cap
-before early stopping. For a run that stopped early, `n_epochs_run = best_epoch + 20`;
-a run that hit the cap has `n_epochs_run = 500` and no early stop. The paper reports
-this truncation. A re-run of these 18 fits with a 1500-epoch cap (step 8 below) keeps
-every verdict unchanged; all 18 stop early, at best epochs 492 to 900.
+Under the 500-epoch cap, 18 of the 40 AE fits in Experiments A and B (A: 8/20, B: 10/20)
+and 3 of the 60 AE fits in Experiment C reached the cap before early stopping. For a run
+that stopped early, `n_epochs_run = best_epoch + 20`; a run that hit the cap has
+`n_epochs_run = 500` and no early stop. The paper reports this truncation. A re-run of
+these 21 fits with a 1500-epoch cap (step 8 below) keeps every verdict unchanged; all 21
+stop early, at best epochs 492 to 900 (A and B) and 540 to 661 (C). The largest change in
+a per-fit gap is 3.2 points (A and B) and 0.14 points (C).
 
 ## Running on the cluster
 
@@ -144,13 +146,19 @@ filled in, and do not commit it) before submitting.
    Output: `logs/measure_ell_output.txt`. Values at days 5, 50, 250 and 500 are
    616, 923, 1234 and 1297 m (200 samples). The paper uses ℓ = 1200 m as a
    convention (within 3% of the day-250 value).
-8. **Epoch-cap check (1500 epochs):** only the 18 fits that hit the 500-epoch cap are re-run.
+8. **Epoch-cap check (1500 epochs):** only the 21 fits that hit the 500-epoch cap are re-run:
+   18 in Experiments A and B (`slurm/run_capped_1500.sbatch`) and 3 in Experiment C
+   (`slurm/run_dose_cap1500.sbatch`: R=1500 m seed 2, and R=3000 m seed 0 for n=8 and 16;
+   the script re-runs all four latent sizes for each of the two runs).
    - Copy the fit script into the data root, because `run_capped_1500.sbatch` calls it from there:
      `cp analysis/pod_vs_ae_eta.py <DATA_ROOT>/`
    - Quick test: `sbatch --export=ALL,TEST=1 --array=0 slurm/run_capped_1500.sbatch`, then
      check that `<DATA_ROOT>/logs/cap1500/TEST_A_seed0_cap1500.json` exists. Move it out of
      `logs/cap1500/` before the full run.
    - Full run: `sbatch slurm/run_capped_1500.sbatch` (10 array tasks, output in `<DATA_ROOT>/logs/`).
+   - Experiment C: `sbatch slurm/run_dose_cap1500.sbatch` (2 array tasks). Outputs go to
+     `<DATA_ROOT>/logs/dose_cap1500/`. Replace the placeholders in the copy you submit; do not
+     commit the filled-in copy.
    - Check convergence and compare with the 500-epoch results:
      ```
      python3 -I analysis/check_convergence.py <DATA_ROOT>/logs 1500 "*_cap1500.out"
@@ -197,7 +205,8 @@ is fitted in sample.
 - The random-field correlation length (0.25 cells) gives a nearly cell-uncorrelated
   field (lag-one correlation about 0.06). This is disclosed in the manuscript and
   has not been varied.
-- The AE is trained under a 500-epoch cap that truncates 18 of 40 fits.
+- The AE is trained under a 500-epoch cap that truncates 18 of 40 fits in A and B and 3 of 60
+  fits in C. All 21 truncated fits were re-run with a 1500-epoch cap; see the epoch-cap section.
 - The truncation-error threshold is fitted in sample and not validated on held-out
   conditions.
 - The drawdown-relative error (eta_drawdown = ||X - X_hat|| / ||X - x0||, with x0 the
